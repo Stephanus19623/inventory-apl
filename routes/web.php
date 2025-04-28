@@ -19,13 +19,16 @@ Route::get('/', function () {
     return view('inventory.layout');
 });
 
-Route::resource('inventory', InventoryController::class);
-
-// Route for the inventory index page
 Route::get('/', [InventoryController::class, 'index'])->name('inventory.index');
 
-// Route for borrow page
-Route::get('/borrow/{id}', [InventoryController::class, 'borrow'])->name('inventory.borrow');
+Route::resource('inventory', InventoryController::class);
+
+Route::get('/borrow', [InventoryController::class, 'borrow'])->name('inventory.borrow');
+
+
+Route::get('/create', [InventoryController::class, 'create'])->name('inventory.create');
+
+Route::post('/inventory', [InventoryController::class, 'store'])->name('inventory.store');
 
 // Route for return page
-Route::get('/return{id}', [InventoryController::class, 'return'])->name('inventory.return');
+Route::get('/return', [InventoryController::class, 'return'])->name('inventory.return');
