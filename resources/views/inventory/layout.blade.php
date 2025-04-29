@@ -7,18 +7,31 @@
         <title>Inventory App</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+            .header {
+                background-color: #343a40; /* Dark background */
+                color: white; /* White text */
+                padding: 15px;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
-        <div class="container">
+        <div class="header">
+            <a href="{{ route('inventory.index') }}">
+                <img src="https://media-hosting.imagekit.io/b67e209c45614fa9/atmilogo-white.png?Expires=1840523856&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=axNfNlV-x~PxY3hzFXHchh8CcI5F1FrIX6JtUBnrLXWltUMpjjJXIsKoS5huyKWglic0t3y6WMcNrFmIQfwxfaQZgdXJUFfRfv7GlWaZ16jUfiJz6lrBvviIMndvKR6N4gTEOtpYyPtxpfy3MwEokLcUh8jrM~8R8FA1axvtgJCm6b61jVrM0ejKZkIsoZFtWZdJ7-gEm57GnPtNf9QBc8tp~c5QrjMX3NJQaEZPvq7jheFP0wcBc4ZR4joU71-~pRG93hCBa6necYPVGLMja9QFzTGnhLZlauo-pEoKVMbQK-NEN0CJ-IepOLm76ffpXTzSxe0dMXnbprTh9wI4ew__" alt="Logo" class="me-3" style="width: 45px; height: 50px;">
+            </a>
+            <h1>Politeknik Industri ATMI Cikarang</h1>
+        </div>
+
+        <div class="container mt-4">
             <div class="d-flex align-items-center">
-                <!-- Image with Link -->
                 <a href="{{ route('inventory.index') }}">
-                    <img src="https://media-hosting.imagekit.io/747463c058a1457d/atmilogo.png?Expires=1840435353&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=HrxONQBI1ZbPNi3tZOpu2nSr34pzwRHHgHA0hfWe561-QKce8XnoC~8YlK0l1H1~2omWyK5DumfLvH-qcMN1f~RNCNJmhIEEeBOeDRDkrDMP-IWGqQqMnvaINqEpmJVbC5eSdwBOu3fWGB6pMFgyaEHNGk47ObK2woGrjr0x5bFBJpqKRuq8lDsuKDMOcB8VrUPuQB4zaeBCTO6GXv-4Bq54n4dXhVU~MQ2i7oB9Y6ulswoszQrvwAkag0Zg~MBPhyM1iPxCdpCLBrWnMH4ZVu2E57L8sR~uoT3uQ3E039OPSxKxLHNcexbl0KTaOaKWRvZrf8M2AFi61BOyGKuwCg__" alt="Logo" class="me-3" style="width: 45px; height: 50px;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/842/842482.png" alt="Logo" class="me-3" style="width: 45px; height: 50px;">
                 </a>
-                <!-- Heading -->
-                <h1>Politeknik Industri ATMI Cikarang</h1>
+                <!-- Subheading -->
+                <h1>Center of Tools Management System</h1>
             </div>
-            <h5>Welcome!</h5>
             <br>
             @yield('content')
         </div>
