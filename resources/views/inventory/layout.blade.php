@@ -16,33 +16,12 @@
                 text-align: center;
             }
 
-            /* Hover header styling */
-            .hover-header {
-                position: fixed;
-                top: -50px; /* Initially hidden */
-                left: 0;
-                width: 100%;
+            /* New top header styling */
+            .top-header {
                 background-color: #007bff; /* Blue background */
                 color: white;
                 padding: 10px;
                 text-align: center;
-                z-index: 500;
-                transition: top 0.25s ease; 
-            }
-
-            /* Create a hover-sensitive area at the top */
-            .hover-area {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100px; /* Height of the sensitive area */
-                z-index: 1000;
-            }
-
-            /* Show the hover header when hovering near the top */
-            .hover-area:hover + .hover-header {
-                top: 0;
             }
 
             /* Running text styling */
@@ -70,15 +49,12 @@
         </style>
     </head>
     <body>
-        <!-- Hover-Sensitive Area -->
-        <div class="hover-area"></div>
-
-        <!-- Hover Header -->
-        <div class="hover-header">
-            <button class="btn btn-light btn-sm me-3">Log In</button>
+        <!-- New Top Header -->
+        <div class="top-header">
+            <a href="{{ route('login') }}" class="btn btn-light btn-sm me-3">Log In</a>
             <div class="running-text">
                 <span>Selamat Datang. Silahkan Log in terlebih dahulu!</span>
-            </div>  
+            </div>
         </div>
 
         <!-- Main Header -->
