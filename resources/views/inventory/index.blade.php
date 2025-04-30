@@ -17,7 +17,7 @@
         <a href="{{ route('inventory.create') }}" class="btn btn-success">Add or Edit</a>
     </div>
 
-    <!-- Tools Table -->
+    <!-- Items Table -->
     <table class="table table-bordered table-hover">
         <thead class="table-dark">
             <tr>
@@ -46,7 +46,7 @@
                 </tr>
             @empty
                 <tr>
-                    <td colspan="5" class="text-center text-muted">No items available</td> <!-- Updated colspan -->
+                    <td colspan="5" class="text-center text-muted">No items available</td> 
                 </tr>
             @endforelse
         </tbody>
